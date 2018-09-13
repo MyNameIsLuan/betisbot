@@ -1,0 +1,21 @@
+{
+  "name": "BetisBOT",
+  "version": "1.0.0",
+  "description": "aa",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "ImLuan",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "discord.js": "^11.3.0",
+    "fs": "0.0.1-security",
+    "dateformat": "^3.0.3",
+    "readline": "^1.3.0",
+    "simple-youtube-api": "^5.0.2",
+    "ffmpeg-binaries": "^4.0.0",
+    "ytdl-core": "^0.23.0",
+    "opusscript": "^0.0.6"
+  }
