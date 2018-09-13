@@ -6,12 +6,7 @@ const ytdl = require('ytdl-core');
 const queue = new Map();
 
 var servers = {};
-var prefix = ';';
-client.on('message', message =>{
-    if(message.content == `<@489933128442314753>`){
-      message.reply(`Para saber meus comandos use o comando ;ajuda !`)
-      }
-});
+var prefix = 'b;';
 client.on("message", async message => {
     var args = message.content.substring(prefix.length).split(" ");
     if (!message.content.startsWith(prefix)) return;
@@ -19,7 +14,13 @@ client.on("message", async message => {
 	var url = args[1] ? args[1].replace(/<(.+)>/g, '$1') : '';
 	var serverQueue = queue.get(message.guild.id);
     switch (args[0].toLowerCase()) {
-      case "tocar":
+    switch (args[0].toLowerCase()) {
+    switch (args[0].toLowerCase()) {
+    switch (args[0].toLowerCase()) {
+    switch (args[0].toLowerCase()) {
+    switch (args[0].toLowerCase()) {
+    switch (args[0].toLowerCase()) {
+   case "tocar":
     var voiceChannel = message.member.voiceChannel;
 		if (!voiceChannel) return message.channel.send('Me desculpe, mas você precisa estar em um canal de voz para tocar música!');
 		var permissions = voiceChannel.permissionsFor(message.client.user);
@@ -125,7 +126,7 @@ break;
 case "ajuda":
 	const ajuda = new Discord.RichEmbed()
 		.setTitle("AJUDA")
-		.setDescription("**Comandos de música**\n`;tocar <música ou link>` - Irá tocar uma música.\n`;pular` - Irá pular uma música.\n`;parar` - Irá excluir a playlist.\n`;tocando` - Irá mostrar a música que está tocando\n`;playlist` - Irá mostrar as músicas que estão na lista\n`;pausar` - Irá pausar a música.\n`;resumir` - Irá retomar uma música pausada")
+		.setDescription("**Comandos de música**\n`b;tocar <música ou link>` - Irá tocar uma música.\n`b;pular` - Irá pular uma música.\n`b;parar` - Irá excluir a playlist.\n`b;tocando` - Irá mostrar a música que está tocando\n`b;playlist` - Irá mostrar as músicas que estão na lista\n`b;pausar` - Irá pausar a música.\n`b;resumir` - Irá retomar uma música pausada")
 		.setColor("#FFFFF")
 		.setFooter("BattleSong - Todos os direitos reservados")
 		message.channel.send(ajuda)
@@ -194,5 +195,6 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
 	serverQueue.textChannel.send(`🎶 Começa a tocar agora: **${song.title}**`)
 }
 });
+}
 
-client.login(process.env.Betis);
+client.login(process.env.betis);
